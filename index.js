@@ -1,3 +1,4 @@
-import run from "./src/app";
+import run from "./src/app.js";
 
 run()
+

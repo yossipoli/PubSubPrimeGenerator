@@ -21,7 +21,7 @@ class myEvent {
   
     emit(type, ...args) {
       let index = 0;
-      while (index < this.events[type].length) {
+      while (index < this.events[type] ?.length) {
         if (typeof this.events[type][index] === "object") {
           this.events[type][index].fn([...args]);
           this.events[type].splice(index, 1);
