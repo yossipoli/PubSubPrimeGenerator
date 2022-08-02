@@ -27,12 +27,9 @@ export default class PrimeGenerator extends myEvent{
 
   isPrime(num) {
     if (num < 2) return false;
-    for (let i = 2; i <= Math.sqrt(num); i++) {
+    for (let i = 2; i <= Math.sqrt(num); i++) 
       if (num % i == 0) return false;
-    }
+
     return true;
   }
 }
-
-const g = new PrimeGenerator()
-g.start()
