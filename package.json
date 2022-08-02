@@ -1,6 +1,7 @@
 {
   "name": "pubsubprimegenerator",
   "version": "1.0.0",
+  "type": "module",
   "description": "Prime Numbers Generator Ex: Create a node project that generates the next prime number on every second (starting from 1 until a certain limit the user chooses). If the next prime number is a Mersenne number, It'll tell \"IT'S a MERSENNE NUMBER...\" + the number. If a prime number ends with 1, prints it with red color Now, BEFORE you start❗ Think of a good way to architect the solution in that way, such as if there is another thing that needs to be done with prime numbers, it won't affect existing code (at least as little as possible), but you can extend or add new code. For example, another new scenario could be: If a prime number is 4 digits, print the subtraction of it from 10,000 (like if prime number is 9973, then print 27)",
   "main": "index.js",
   "scripts": {
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/yossipoli/PubSubPrimeGenerator/issues"
   },
-  "homepage": "https://github.com/yossipoli/PubSubPrimeGenerator#readme"
+  "homepage": "https://github.com/yossipoli/PubSubPrimeGenerator#readme",
+  "dependencies": {
+    "chalk": "^5.0.1"
+  }
 }
