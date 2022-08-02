@@ -1,14 +1,26 @@
 import myEvent from './../common/MyEvent.js'
 
 export default class PrimeGenerator extends myEvent{
-  constructor(limit){
+  constructor(limit=25){
     super()
-    this.generator = this.primeGenerator(limit)
+    this.limit = limit
   }
 
-  primeGenerator = function* (limit) {
-    if (limit>=2) yield 2
-    for (let i = 3; i <= limit; i=i+2) {
+  start(){
+    const generator = this.generate()
+    const interval = setInterval(() => {
+      const currentNumber = generator.next().value
+      if (currentNumber){
+        console.log(currentNumber)
+        // this.emit("new", currentNumber)
+      } else
+          clearInterval(interval)
+    }, 1000);
+  }
+
+  generate = function* () {
+    if (this.limit>=2) yield 2
+    for (let i = 3; i <= this.limit; i=i+2) {
       if (this.isPrime(i)) yield i;
     }
   }
@@ -21,3 +33,6 @@ export default class PrimeGenerator extends myEvent{
     return true;
   }
 }
+
+const g = new PrimeGenerator()
+g.start()
