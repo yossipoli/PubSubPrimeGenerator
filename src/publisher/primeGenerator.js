@@ -12,7 +12,7 @@ export default class PrimeGenerator extends myEvent{
       const currentNumber = generator.next().value
       if (currentNumber){
         console.log(currentNumber)
-        // this.emit( "new", currentNumber)
+        this.emit( "new", currentNumber)
       } else
           clearInterval(interval)
     }, 1000);
