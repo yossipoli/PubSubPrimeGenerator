@@ -1,6 +1,6 @@
 import myEvent from './../common/MyEvent.js'
 
-class PrimeGenerator extends myEvent{
+export default class PrimeGenerator extends myEvent{
   constructor(limit){
     super()
     this.generator = this.primeGenerator(limit)
