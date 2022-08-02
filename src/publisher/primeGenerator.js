@@ -1,6 +1,6 @@
-import myEvent from './../common/MyEvent.js'
+import EventEmitter from 'events'
 
-export default class PrimeGenerator extends myEvent{
+export default class PrimeGenerator extends EventEmitter{
   constructor(limit=25){
     super()
     this.limit = limit
